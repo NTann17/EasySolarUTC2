@@ -1,0 +1,372 @@
+﻿@using SolarK64.Models.Entities;
+@{
+
+    ViewData["title"] = "Trang chủ";
+}
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <div class="content-box">
+                    <div class="logo-wrap" style="display: table;width: 100%;margin-bottom: 20px;">
+                        <a href="/">
+                            <img src="./asset/image/logo.png?v=1" alt="" class="logo" style="width: 231px;">
+                        </a>
+                        <img src="./asset/image/Layer-37.png" alt="" class="logo logo-reponsive" style="float: right;">
+                    </div>
+                    <div class="box-title">
+                        <h1 class="title">Save Up to $300 a Month on Your Electric Bills</h1>
+                        <p class="sub-title">Get your free quote from local installers in just 3 minutes</p>
+                        <ul class="list-content">
+                            <li>Get a Free solar savings report</li>
+                            <li>See your personalized costs & savings</li>
+                            <li>Check out incentives in your state</li>
+                            <li>Compare prices from local installers</li>
+                        </ul>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-start  gy-4">
+                        <div class="btn-box">
+                            <a href="https://www.bz2atrk.com/7QDDDL/R74QP/" class="btn" target="_blank">Get your Free Quote Now</a>
+                            <p>100% Free, No obligation, Takes only 30 seconds</p>
+                        </div>
+                        <div class="star-box">
+                            <p>Rated 4.9/5 from 53,709 reviews</p>
+                            <img src="./asset/image/box-star.png" alt="" class="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="logo-wrap logo-wrap-pc">
+                    <img src="./asset/image/Layer-37.png" alt="" class="logo" style="float: right;">
+                </div>
+                <div class="slide-box">
+                    <div class="title-box">
+                        <h2 class="title">
+                            Real Customer, <br>
+                            Real Result
+                        </h2>
+                    </div>
+                    <div class="swiper-container slide">
+                        <div class="swiper-wrapper">
+                            @{
+                                if (ViewData["lstPhanHoi"] != null)
+                                {
+                                    foreach (PhanHoi phanHoi in ViewBag.lstPhanHoi)
+                                    {
+                                        <div class="swiper-slide testimonial-card">
+                                            <div class="slide-item testimonial-content">
+                                                <div class="info-box">
+                                                    <div class="avt-wrap"><img src="./asset/image/@phanHoi.AnhDaiDien" alt="" class="img"></div>
+                                                    <div class="box-name">
+                                                        <p class="name">@phanHoi.HoVaTen</p>
+                                                        <div class="star-box">
+                                                            @{
+                                                                for (int i = 0; i < phanHoi.DiemDanhGia; i++)
+                                                                {
+                                                                    <img src="./asset/image/star.png" alt="" class="star">
+                                                                }
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p>@phanHoi.NhanXet</p>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
+
+                        <!-- Add Navigation Arrows -->
+                        <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+                        <div class="panigation">
+                            <button class="prev-slide"><img src="./asset/image/prev-slide.svg" alt=""></button>
+                            <button class="next-slide"><img src="./asset/image/next-slide.svg" alt=""></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="intro-section">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-12">
+                <h2 class="title">
+                    Switch to Solar with No <br> Upfront Cost and Risk-Free
+                </h2>
+            </div>
+            <div class="col-6 col-xl-3" style="border-right: 1px solid #cacaca;">
+                <div class="card">
+                    <div class="icon-wrap"><img src="./asset/image/energy 2.svg" alt="" class="img"></div>
+                    <div class="content-box">
+                        <h3 class="title">Rock-Solid<br>Warranty</h3>
+                        <p>Top-rated solar panels<br>backed by a 30-year<br> performance<br> guarantee.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3" style="border-right: 1px solid #cacaca;">
+                <div class="card">
+                    <div class="icon-wrap"><img src="./asset/image/energy 2 (1).svg" alt="" class="img"></div>
+                    <div class="content-box">
+                        <h3 class="title">Big Savings, <br>Local Perks</h3>
+                        <p>Score tax credits, state <br>incentives, and cash <br>rewards – all tailored to<br> where you live!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3" style="border-right: 1px solid #cacaca;">
+                <div class="card">
+                    <div class="icon-wrap"><img src="./asset/image/energy 2 (2).svg" alt="" class="img"></div>
+                    <div class="content-box">
+                        <h3 class="title">$0 Down<br>Installation</h3>
+                        <p>Get solar set up with zero <br>upfront costs. Start saving <br>right away!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card">
+                    <div class="icon-wrap"><img src="./asset/image/Group.svg" alt="" class="img"></div>
+                    <div class="content-box">
+                        <h3 class="title">No Strings <br>Attached</h3>
+                        <p>Chat with trusted pros, <br>get free quotes, no <br>payment info needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="step-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 col-xl-6">
+                <h2 class="title">Get your free quote in 3 steps</h2>
+                <div class="step-box">
+                    <div class="step">
+                        <div class="wrap-icon"><img src="./asset/image/step-1.png" alt=""></div>
+                        <div class="content-box">
+                            <p>Step 1</p>
+                            <h3 class="title">Apply Online</h3>
+                            <p>Quick and simple—just complete our secure form.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="wrap-icon"><img src="./asset/image/step-2.png" alt=""></div>
+                        <div class="content-box">
+                            <p>Step 2</p>
+                            <h3 class="title">Get Quotes</h3>
+                            <p>Solar quotes will be sent for easy comparison.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="wrap-icon"><img src="./asset/image/step-3.png" alt=""></div>
+                        <div class="content-box">
+                            <p>Step 3</p>
+                            <h3 class="title">Select & Save</h3>
+                            <p>Begin saving with solar energy!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="brand-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="brand-box">
+                    <div class="brand"><img src="./asset/image/brand-1.png" alt="" class="img"></div>
+                    <div class="brand"><img src="./asset/image/vivint.png" alt="" class="img"></div>
+                    <div class="brand"><img src="./asset/image/sunpower.png" alt="" class="img"></div>
+                    <div class="brand"><img src="./asset/image/tesla.png" alt="" class="img"></div>
+                    <div class="brand"><img src="./asset/image/candian.png" alt="" class="img"></div>
+                    <div class="brand"><img src="./asset/image/qcell.png" alt="" class="img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-section">
+    <div class="container">
+        <div class="row mb-3 mb-xl-5">
+            <div class="col-12 col-md-12 col-xl-6"><div class="img-wrap"><img src="./asset/image/services-1.jpg" alt="" class="img"></div></div>
+            <div class="col-12 col-md-12 col-xl-6">
+                <div class="content-box">
+                    <h2 class="title pt-2">Sleek & Built to Last</h2>
+                    <ul>
+                        <li>With a modern, low-profile design, they sit close to your roof for a clean, seamless look.</li>
+                        <li>Plus, these panels are tough and weatherproof, built to power your home for decades without missing a beat.</li>
+                        <li>Ready to see how they’ll look on your roof?</li>
+                    </ul>
+                    <a href="https://www.bz2atrk.com/7QDDDL/R74QP/" class="btn outline" target="_blank">Get your Free Quote Today</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 col-xl-6">
+                <div class="content-box">
+                    <h2 class="title">Find the Best Solar Deal, Hassle-Free</h2>
+                    <ul>
+                        <li>Shopping around for solar can be overwhelming, so we’ve done the hard work for you.</li>
+                        <li>With Easy Solar Quotes, we’ve pre-screened top companies and filtered out the rest using real customer feedback.</li>
+                        <li>You get reliable quotes without the guesswork. Ready to see your options?</li>
+                    </ul>
+                    <a href="https://www.bz2atrk.com/7QDDDL/R74QP/" class="btn outline" target="_blank">Get your Free Quote Today</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-xl-6"><div class="img-wrap"><img src="./asset/image/services-2.jpg" alt="" class="img"></div></div>
+        </div>
+    </div>
+</section>
+<section class="feedback-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="title">
+                    See What Our Happy <br>Customers Are Saying
+                </h2>
+                <div class="slide-v2 swiper-container1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-item">
+                                <div class="avt"><img src="./asset/image/Barbara K. Miller.jpg" alt="" class="img"></div>
+                                <div class="star-box">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                </div>
+                                <p class="name">Mrs. Barbara K. Miller</p>
+                                <p class="content">“Solar has been a game-changer! We went from paying $400 each month to just $150. It’s incredible how much we’re saving, and it’s really helped ease our monthly expenses.”</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="slide-item">
+                                <div class="avt"><img src="./asset/image/Deborah T. Harris.jpg" alt="" class="img"></div>
+                                <div class="star-box">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 5.png" alt="" class="star">
+                                </div>
+                                <p class="name">Mrs. Deborah T. Harris</p>
+                                <p class="content">“We’re thrilled with our decision to go solar. Our bill dropped from $350 to around $120 a month! It’s amazing how much extra we’re able to save each month now.”</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="slide-item">
+                                <div class="avt"><img src="./asset/image/Carol J. Bennett.jpg" alt="" class="img"></div>
+                                <div class="star-box">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 5.png" alt="" class="star">
+                                </div>
+                                <p class="name">Mrs. Carol J. Bennett</p>
+                                <p class="content">“Switching to solar has been wonderful for our budget. We’ve cut our electric bill by almost 60%, going from $300 a month to $120. I only wish we’d done it sooner!”</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="slide-item">
+                                <div class="avt"><img src="./asset/image/Diane P. Scott.jpg" alt="" class="img"></div>
+                                <div class="star-box">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                    <img src="./asset/image/Star 1.png" alt="" class="star">
+                                </div>
+                                <p class="name">Mrs. Diane P. Scott</p>
+                                <p class="content">“Going solar has saved us over $200 each month on our electric bills. We couldn’t be happier with the savings and the positive impact on our family budget!”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panigation">
+                        <button class="prev-slide"><img src="./asset/image/prev-slide.svg" alt=""></button>
+                        <div class="dots"></div>
+                        <button class="next-slide"><img src="./asset/image/next-slide.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"><h2 class="title">FAQs</h2></div>
+            <div class="col-12 col-md-6">
+                <div class="faq-box">
+                    <div class="title-box">
+                        <img src="./asset/image/ooui_next-ltr.svg" alt="" class="icon">
+                        <h3 class="faq-title">How long do solar panels typically last?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <p>Solar panels typically last 25 to 30 years or more. Over this time, they gradually lose efficiency, but most panels still operate at about 80% of their original capacity after 25 years.</p>
+                    </div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="title-box">
+                        <img src="./asset/image/ooui_next-ltr.svg" alt="" class="icon">
+                        <h3 class="faq-title">Do solar panels work on cloudy days or at night?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <p>Solar panels generate electricity whenever there’s sunlight, even on cloudy days, although at reduced efficiency. However, they don’t produce electricity at night, so most systems rely on battery storage or grid power after dark.</p>
+                    </div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="title-box">
+                        <img src="./asset/image/ooui_next-ltr.svg" alt="" class="icon">
+                        <h3 class="faq-title">How much maintenance do solar panels require?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <p>Solar panels require minimal maintenance. Occasional cleaning to remove dust or debris is usually enough, and routine inspections every few years can help ensure optimal performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="faq-box">
+                    <div class="title-box">
+                        <img src="./asset/image/ooui_next-ltr.svg" alt="" class="icon">
+                        <h3 class="faq-title">Can solar panels withstand extreme weather conditions?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <p>Yes, high-quality solar panels are designed to withstand various weather conditions, including snow, hail, and strong winds. They’re rigorously tested to ensure durability, but it’s always good to check local guidelines and installation standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="title-box">
+                        <img src="./asset/image/ooui_next-ltr.svg" alt="" class="icon">
+                        <h3 class="faq-title">How much can I save on my electric bill by switching to solar?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <p>Savings depend on factors like energy usage, local rates, and the size of your solar system. On average, homeowners can save $100 to $300 a month, with some even eliminating their electric bills entirely.</p>
+                    </div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="title-box">
+                        <img src="./asset/image/ooui_next-ltr.svg" alt="" class="icon">
+                        <h3 class="faq-title">Are there any government incentives for installing solar panels?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <p>Yes, many countries and states offer incentives, tax credits, and rebates to reduce the cost of installing solar panels. It’s a good idea to check with local agencies for available programs in your area.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

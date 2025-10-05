@@ -1,0 +1,7 @@
+H:\UEH\dev2025\SolarK64\SolarK64\obj\Release\net8.0\PubTmp\Out\SolarK64.exe
+H:\UEH\dev2025\SolarK64\SolarK64\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+H:\UEH\dev2025\SolarK64\SolarK64\obj\Release\net8.0\PubTmp\Out\appsettings.json
+H:\UEH\dev2025\SolarK64\SolarK64\obj\Release\net8.0\PubTmp\Out\SolarK64.dll
+H:\UEH\dev2025\SolarK64\SolarK64\obj\Release\net8.0\PubTmp\Out\SolarK64.deps.json
+H:\UEH\dev2025\SolarK64\SolarK64\obj\Release\net8.0\PubTmp\Out\SolarK64.runtimeconfig.json
+H:\UEH\dev2025\SolarK64\SolarK64\obj\Release\net8.0\PubTmp\Out\SolarK64.pdb

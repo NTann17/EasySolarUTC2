@@ -1,0 +1,49 @@
+/* _content/SolarK64/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-bss89w4bwp] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-bss89w4bwp] {
+  color: #0077cc;
+}
+
+.btn-primary[b-bss89w4bwp] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-bss89w4bwp], .nav-pills .show > .nav-link[b-bss89w4bwp] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-bss89w4bwp] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-bss89w4bwp] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-bss89w4bwp] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-bss89w4bwp] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-bss89w4bwp] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
