@@ -12,6 +12,7 @@ namespace SolarK64.Models.EF
 
         public DbSet<KieuPhanHoi> KieuPhanHoi { get; set; }
         public DbSet<PhanHoi> PhanHoi { get; set; }
+        public DbSet<TaiKhoan> TaiKhoan { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -58,6 +59,30 @@ namespace SolarK64.Models.EF
 
                 entity.Property(e => e.NhanXet)
                     .HasMaxLength(1000);
+            });
+
+            // Cấu hình cho KieuPhanHoi
+            modelBuilder.Entity<TaiKhoan>(entity =>
+            {
+                // Đặt MaKieu làm khóa chính
+                entity.HasKey(e => e.TenDangNhap);
+
+                // Cấu hình các thuộc tính khác (tùy chọn)
+                entity.Property(e => e.MatKhau)
+                    .HasMaxLength(50)
+                    .IsRequired();
+
+                entity.Property(e => e.HoVaTen)
+                   .HasMaxLength(200)
+                   .IsRequired();
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(100)
+                    .IsRequired();
+
+                entity.Property(e => e.VaiTro)
+                   .HasMaxLength(50)
+                   .IsRequired();
             });
         }
     }
