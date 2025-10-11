@@ -3,3 +3,5 @@
 ################################################################################
 
 /SolarK64/appsettings.Development.json
+/SolarK64/obj/Debug/net8.0
+/SolarK64/bin/Debug/net8.0
