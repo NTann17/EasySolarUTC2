@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SolarK64.Services;
 
 namespace SolarK64.Controllers
@@ -11,6 +12,7 @@ namespace SolarK64.Controllers
             _solarServices = solarServices;
         }
 
+        [Authorize(Roles = "admin")]
         [Route("/admin/dashboard")]
         public IActionResult Dashboard()
         {
