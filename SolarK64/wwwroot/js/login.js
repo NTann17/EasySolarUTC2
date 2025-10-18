@@ -1,11 +1,24 @@
-﻿function loginAccount(userInput) {
+﻿function token () {
+    return $('input[name=__RequestVerificationToken]').val();
+}
+function loginAccount(userInput) {
+    userInput.__RequestVerificationToken = token();
     $.ajax({
         type: "POST",
         url: "/Account/LoginToSystem",
         data: userInput,
         dataType: 'json',
         success: function (res) {
-            var x = 3;
+            if (res.status === 'success') {
+                location.href = '/admin/dashboard';
+            }
+            else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Lỗi đăng nhập",
+                    text: res.message
+                });
+            }
         },
         error: function () {
             var x = 3;

@@ -19,10 +19,15 @@ namespace SolarK64.Controllers
         [Route("/login")]
         public IActionResult Index()
         {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                return Redirect("/admin/dashboard");
+            }
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<JsonResult> LoginToSystem(string username, string password)
         {
             try
@@ -43,9 +48,8 @@ namespace SolarK64.Controllers
                 }
                 else
                 {
-                    return Json(new { status = WebConstants.ERROR, message="Tài khoản hoặc mật khẩu không chính xác" });
+                    return Json(new { status = WebConstants.ERROR, message = "Tài khoản hoặc mật khẩu không chính xác." });
                 }
-
             }
             catch(Exception ex)
             {
