@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SolarK64.Models;
 using SolarK64.Models.EF;
+using SolarK64.Services;
 using System.Diagnostics;
 
 namespace SolarK64.Controllers
@@ -9,11 +10,11 @@ namespace SolarK64.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationDbContext _context;
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        private readonly ISolarServices _solarServices;
+        public HomeController(ILogger<HomeController> logger, ISolarServices solarServices)
         {
             _logger = logger;
-            _context = context;
+            _solarServices = solarServices;
         }
 
         public IActionResult Index()
@@ -23,7 +24,7 @@ namespace SolarK64.Controllers
 
         public IActionResult TrangChu()
         {
-            var lstPhanHoi = _context.PhanHoi.AsNoTracking().Where(t=>t.MaKieuPhanHoi== "HeaderFeedback").ToList();
+            var lstPhanHoi = _solarServices.GetListPhanHoi("HeaderFeedback");
             ViewData["lstPhanHoi"] = lstPhanHoi;
             return View();
         }
